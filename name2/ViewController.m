@@ -49,6 +49,10 @@
     [_label3 release];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(go) userInfo:nil repeats:YES];
     [self.timer fire];
+    self.timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(go2) userInfo:nil repeats:YES];
+    [self.timer2 fire];
+    self.timer3 = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(go3) userInfo:nil repeats:YES];
+    [self.timer3 fire];
 }
 - (void)go
 {
