@@ -54,7 +54,12 @@
     self.timer3 = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(go3) userInfo:nil repeats:YES];
     [self.timer3 fire];
 }
-
+- (void)go
+{
+    NSArray *arr = @[@"王霄", @"于海莹", @"任成", @"王佐文", @"梁志隆", @"巢鑫", @"刘新宇", @"曹晓雨", @"周磊", @"姚斌", @"张金峰", @"刘峻豪", @"李冬阳", @"朱硕", @"孔欢欢", @"宋绪玮", @"彭安东", @"刘明洋", @"秦虎坡", @"胡佳俊", @"张闯", @"白宇", @"王岩", @"孙亚男", @"梁辉", @"宋梅", @"张维扬", @"陈思羽", @"金锡珍", @"吴琼", @"唐超", @"金宝泉", @"李涵", @"苏明山", @"王建业", @"庄振峰", @"刘宝武", @"赵佟越", @"潘忠敏", @"黄灿辉", @"聂浩楠", @"甘露", @"袁园", @"武建平", @"赵鹤"];
+    NSInteger temp = arc4random() % arr.count;
+    self.label.text = arr[temp];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
