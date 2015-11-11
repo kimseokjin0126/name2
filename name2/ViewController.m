@@ -42,6 +42,13 @@
     self.label2.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.label2];
     [_label2 release];
+    self.label3 = [[UILabel alloc] initWithFrame:CGRectMake(250, 150, 100, 60)];
+    self.label3.font = [UIFont boldSystemFontOfSize:30];
+    self.label3.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:self.label3];
+    [_label3 release];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(go) userInfo:nil repeats:YES];
+    [self.timer fire];
 }
 
 - (void)didReceiveMemoryWarning {
